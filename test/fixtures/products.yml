@@ -1,0 +1,12 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+SamsungGalaxyS23:
+  title: SamsungGalaxyS23
+  description: 256GB 8GB RAM
+  price: 3200000
+
+Iphone14:
+  title: Iphone14
+  description: 256GB 6GB RAM
+  price: 3600000
+
