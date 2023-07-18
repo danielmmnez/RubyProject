@@ -1,0 +1,27 @@
+<% @cart.orderables.each do |orderable| %>
+    <% phone = orderable.phone %>
+    <div id="<%= "cart-#{phone.id}" %>">
+        <div style="display:flex;justify-content:space-between;margin: 0em 5em;">
+        
+            <strong>Name: </strong>
+            <%= phone.name %>
+            <strong>Brand: </strong>
+            <%= phone.brand%>
+            <strong>Price: </strong>
+            <%= phone.price%>
+
+            <%= form_with(url: cart_add_path) do |f|%>
+                <%= f.hidden_field :id, value: phone.id%>
+                <%= f.number_field :quantity, value: orderable.quantity , min: 0 %>
+                <%= f.submit "Add to cart"%>
+            <%end%>
+
+            <%= form_with(url: cart_remove_path) do |f|%>
+                <%= f.hidden_field :id, value: orderable.id%>
+                <%=  f.submit "X" %>
+            <%end%>
+            <strong>Total:</strong>
+            <%= orderable.total %>
+        </div>
+    </div>
+<% end %>
