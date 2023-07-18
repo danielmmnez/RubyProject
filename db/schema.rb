@@ -16,17 +16,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_17_162001) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "celulares", force: :cascade do |t|
-    t.string "nombre"
-    t.text "descripcion"
-    t.string "ram"
-    t.string "marca"
-    t.float "precio"
-    t.integer "memoria"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "orderables", force: :cascade do |t|
     t.integer "phone_id", null: false
     t.integer "cart_id", null: false

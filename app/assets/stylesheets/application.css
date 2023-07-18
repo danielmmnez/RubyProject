@@ -13,3 +13,94 @@
  *= require_tree .
  *= require_self
  */
+header{
+    background-color: #EFEFEF;
+}
+
+header div{
+    background-color: white;
+    border-radius: 10px;
+}
+header h1{
+    background-color:#2CA3E6;
+    color: white;
+    border-radius: 10px;
+}
+
+*::after,
+*::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #EFEFEF;
+    opacity: 1;
+}
+body{
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: 'Lato';
+    color: #333;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    stroke: #000;
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0;
+}
+
+
+
+
+
+
+
+
+.container-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.items{
+    border-radius: 10px;
+}
+.items:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+.items img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+.items figure{
+    overflow: hidden;
+}
+.items:hover img{
+    transform: scale(1.2);
+}
+.info-products{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
