@@ -1,0 +1,26 @@
+<h1>Edit Phone</h1>
+<%= form_with model: @phone do |form| %>
+<div>
+<%= form.label :name %><br>
+<%= form.text_field :name %>
+</div>
+<div>
+<%= form.label :ram %><br>
+<%= form.text_area :ram %>
+</div>
+<div>
+<%= form.label :brand %><br>
+<%= form.text_area :brand %>
+</div>
+<div>
+<%= form.label :price %><br>
+<%= form.text_area :price %>
+</div>
+<div>
+<%= form.label :storage %><br>
+<%= form.text_area :storage %>
+</div>
+<div>
+<%= form.submit %>
+</div>
+<% end %>

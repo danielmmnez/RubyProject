@@ -1,0 +1,42 @@
+<h1>New Phone</h1>
+<%= form_with model: @phone do |form| %>
+<div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+    <% @phone.errors.full_messages_for(:name).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+    <br>
+</div>
+<div>
+    <%= form.label :ram %><br>
+    <%= form.text_area :ram %>
+    <% @phone.errors.full_messages_for(:ram).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.label :brand %><br>
+    <%= form.text_area :brand %>
+    <% @phone.errors.full_messages_for(:brand).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.label :price %><br>
+    <%= form.text_area :price %>
+    <% @phone.errors.full_messages_for(:price).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+    <%= form.label :storage %><br>
+    <%= form.text_area :storage %>
+    <% @phone.errors.full_messages_for(:storage).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+</div>
+<div>
+<%= form.submit %>
+</div>
+<% end %>
