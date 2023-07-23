@@ -3,4 +3,9 @@
     <% phone = orderable.phone %>
     <p><%= phone.name %> * <%= orderable.quantity %> = $<%= phone.price * orderable.quantity %></p>
 <% end %>
-<p>Your total is <%= @cart.total%></p>
+<p>Your total is: <%= @cart.total%></p>
+<div>
+    <a href="<%= %>">Check out</a>
+    <a href="<%=  %>">Clear cart</a>
+    <p><%= link_to "Go back to shopping", root_path %></p>
+</div>

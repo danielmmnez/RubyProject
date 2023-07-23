@@ -5,4 +5,5 @@ class Orderable < ApplicationRecord
   def total 
     phone.price * quantity
   end
+
 end

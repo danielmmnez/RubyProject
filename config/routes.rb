@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   post 'cart/remove'
   resources :phones
   root "phones#index"
+  post 'cart/payout'
+  post 'cart/clear'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

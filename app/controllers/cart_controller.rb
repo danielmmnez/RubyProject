@@ -27,7 +27,7 @@ class CartController < ApplicationController
   end
 
   def remove
-    Orderable.find_by(id: params[:id].destroy)
+    Orderable.find_by(id: params[:id]).destroy
     respond_to do |format|
       format.turbo_stream do
         render turbo_stream: [turbo_stream.replace('cart',
@@ -35,6 +35,16 @@ class CartController < ApplicationController
           locals: {cart: @cart})]
       end
     end
+  end
+
+  def payout
+    clear
+    root_path
+  end
+
+  def clear
+    @cart ||= Cart.find_by(id: session[:cart_id])
+    root_path
   end
 
 end

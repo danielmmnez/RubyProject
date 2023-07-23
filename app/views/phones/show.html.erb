@@ -9,14 +9,14 @@
                 <%= f.number_field :quantity, value: 0 , min: 1%>
                 <%= f.submit "Add to cart" %>
             <%end%>
-                                <% if false %>
-                                <p><%= link_to "Edit", edit_phone_path(@phone)%></p>
-                                <p>
-                                    <%= link_to "Delete", phone_path(@phone),
-                                    data: {
-                                    turbo_method: :delete,
-                                    turbo_confirm: "Are you sure?"
-                                    } %>
-                                </p>
-                                <%end%>
+                            <% if false %>
+                            <p><%= link_to "Edit", edit_phone_path(@phone)%></p>
+                            <p>
+                                <%= link_to "Delete", phone_path(@phone),
+                                data: {
+                                turbo_method: :delete,
+                                turbo_confirm: "Are you sure?"
+                                } %>
+                            </p>
+                            <%end%>
 <p><%= link_to "Back", root_path %></p>
