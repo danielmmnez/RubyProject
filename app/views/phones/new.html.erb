@@ -1,42 +1,58 @@
-<h1>New Phone</h1>
-<%= form_with model: @phone do |form| %>
-<div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-    <% @phone.errors.full_messages_for(:name).each do |message| %>
-    <div><%= message %></div>
+<div class="add-items">
+    <h1>Añadir Smartphone</h1>
+
+    <%= form_with model: @phone do |form| %>
+    <div>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        <% @phone.errors.full_messages_for(:name).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+        <br>
+    </div>
+
+    <div>
+        <%= form.label :ram %><br>
+        <%= form.text_area :ram %>
+        <% @phone.errors.full_messages_for(:ram).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :brand %><br>
+        <%= form.text_area :brand %>
+        <% @phone.errors.full_messages_for(:brand).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :price %><br>
+        <%= form.text_area :price %>
+        <% @phone.errors.full_messages_for(:price).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.label :storage %><br>
+        <%= form.text_area :storage %>
+        <% @phone.errors.full_messages_for(:storage).each do |message| %>
+        <div><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+    <%= form.submit %>
+    </div>
     <% end %>
-    <br>
+
+    <div class="back-container">
+        <a href="<%=root_path%>" class="back-link">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+            </svg>
+        </a>
+    </div>
 </div>
-<div>
-    <%= form.label :ram %><br>
-    <%= form.text_area :ram %>
-    <% @phone.errors.full_messages_for(:ram).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-</div>
-<div>
-    <%= form.label :brand %><br>
-    <%= form.text_area :brand %>
-    <% @phone.errors.full_messages_for(:brand).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-</div>
-<div>
-    <%= form.label :price %><br>
-    <%= form.text_area :price %>
-    <% @phone.errors.full_messages_for(:price).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-</div>
-<div>
-    <%= form.label :storage %><br>
-    <%= form.text_area :storage %>
-    <% @phone.errors.full_messages_for(:storage).each do |message| %>
-    <div><%= message %></div>
-    <% end %>
-</div>
-<div>
-<%= form.submit %>
-</div>
-<% end %>
