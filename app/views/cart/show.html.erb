@@ -4,9 +4,21 @@
     <% phone = orderable.phone %>
     <p><%= phone.name %> * <%= orderable.quantity %> = $<%= phone.price * orderable.quantity %></p>
 <% end %>
-<p>Your total is: <%= @cart.total%></p>
+<% if @cart.orderables.count > 0 %>
+    <p>Your total is: <%= @cart.total%></p>
+    <br>
+    <%= form_with(url: cart_payout_path) do |f|%>
+        <%= f.hidden_field :cart_id, value: @cart.id%>
+        <%= f.submit "Pay out!" %>
+    <%end%>
+    
+    <%= form_with(url: cart_clear_path) do |c|%>
+        <%= c.hidden_field :cart_id, value: @cart.id%>
+        <%= c.submit "Clear cart"%>
+    <%end%>
+<% else %>
+    <p>Your cart is empty!</p>
+<% end %>
 <div>
-    <a href="<%= %>">Check out</a>
-    <a href="<%=  %>">Clear cart</a>
     <p><%= link_to "Go back to shopping", root_path %></p>
 </div>

@@ -38,13 +38,16 @@ class CartController < ApplicationController
   end
 
   def payout
-    clear
-    root_path
+    @cart = Cart.create
+    session[:cart_id] = @cart.id
+    session[:message] = 'Tanks for shopping with us, we hope you enjoy it!'
+    redirect_to root_path
   end
 
   def clear
-    @cart ||= Cart.find_by(id: session[:cart_id])
-    root_path
+    @cart.orderables.each do |orderable|
+      Orderable.find_by(cart_id: params[:cart_id]).destroy
+    end
+    redirect_to cart_path
   end
-
 end
