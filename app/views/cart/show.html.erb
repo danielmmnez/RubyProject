@@ -7,11 +7,21 @@
 <% if @cart.orderables.count > 0 %>
     <p>Your total is: <%= @cart.total%></p>
     <br>
-    <%= form_with(url: cart_payout_path) do |f|%>
+
+    <%= form_with(url: cart_payout_path, id: "payout-form") do |f|%>
         <%= f.hidden_field :cart_id, value: @cart.id%>
         <%= f.submit "Pay out!" %>
     <%end%>
-    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("payout-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("¡La compra se ha completado con exito!");
+            });
+        });
+    </script>
+
     <%= form_with(url: cart_clear_path) do |c|%>
         <%= c.hidden_field :cart_id, value: @cart.id%>
         <%= c.submit "Clear cart"%>
