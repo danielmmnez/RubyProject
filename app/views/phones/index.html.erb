@@ -6,9 +6,13 @@
             </figure>
             <p class="brand"><%= phone.brand%></p>
             <div class="info-products">
-
                 <h2><%= phone.name %></h2>
-                <p class="price">Desde: $<%= phone.price%></p>
+
+                <div class="price-container">
+
+                <p class="price">Desde: </p>
+                <p class="number">$ <%= phone.price%></p>
+                </div>
 
                 <div class="see">
                     <a href="<%=phone_path(phone)  %>" class="slink">Ver más</a>
