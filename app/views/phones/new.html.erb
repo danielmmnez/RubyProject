@@ -1,3 +1,4 @@
+<p hidden><%= @render_cart = false %></p>
 <h1>New Phone</h1>
 <%= form_with model: @phone do |form| %>
 <div>
@@ -40,3 +41,6 @@
 <%= form.submit %>
 </div>
 <% end %>
+<div>
+    <p><%= link_to "Cancel", root_path %></p>
+</div>

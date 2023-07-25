@@ -9,6 +9,7 @@
             <%= phone.brand%>
             <strong>Price: </strong>
             <%= phone.price%>
+            <strong> COP</strong>
 
             <%= form_with(url: cart_add_path) do |f|%>
                 <%= f.hidden_field :id, value: phone.id%>

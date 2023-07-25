@@ -1,9 +1,9 @@
 
             <h1>Name: <%= @phone.name %></h1>
             <p><strong>Brand: </strong><%= @phone.brand %></p>
-            <p><strong>RAM memory: </strong><%= @phone.ram %></p>
-            <p><strong>Storage: </strong><%= @phone.storage %></p>
-            <p><strong>Price: </strong><%= @phone.price %></p>
+            <p><strong>RAM memory: </strong><%= @phone.ram %><strong> GB</strong></p>
+            <p><strong>Storage: </strong><%= @phone.storage %><strong> GB</strong></p>
+            <p><strong>Price: </strong><%= @phone.price %><strong> COP</strong></p>
             <%= form_with(url: cart_add_path) do |f|%>
                 <%= f.hidden_field :id, value: @phone.id%>
                 <%= f.number_field :quantity, value: 0 , min: 1%>
