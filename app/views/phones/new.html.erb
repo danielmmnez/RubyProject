@@ -6,49 +6,46 @@
 
     <%= form_with model: @phone do |form| %>
     <div class="name">
-        <div class="name-label"><%= form.label :name %></div>
-        <div class="name-input"><%= form.text_field :name %></div>
+        <%= form.text_field :name%>
+        <%=form.label :name%>
+    </div>
         <% @phone.errors.full_messages_for(:name).each do |message| %>
         <div><%= message %></div>
         <% end %>
-        <br>
-    </div>
 
-    <div class="ram">
-        <%= form.label :ram %><br>
-        <%= form.text_area :ram %>
+    <div class="name">
+        <%= form.text_field :ram %>
+        <%= form.label :ram %>
+    </div>
         <% @phone.errors.full_messages_for(:ram).each do |message| %>
         <div><%= message %></div>
         <% end %>
-    </div>
 
-    <div class="newbrand">
-        <%= form.label :brand %><br>
-        <%= form.text_area :brand %>
+    <div class="name">
+        <%= form.text_field :brand %>
+        <%= form.label :brand %>
+    </div>
         <% @phone.errors.full_messages_for(:brand).each do |message| %>
         <div><%= message %></div>
         <% end %>
-    </div>
 
-    <div class="new-price">
-        <%= form.label :price %><br>
-        <%= form.text_area :price %>
+    <div class="name">
+        <%= form.text_field :price %>
+        <%= form.label :price %>
+    </div>
         <% @phone.errors.full_messages_for(:price).each do |message| %>
         <div><%= message %></div>
         <% end %>
-    </div>
 
-    <div class="storage">
-        <%= form.label :storage %><br>
-        <%= form.text_area :storage %>
+    <div class="name">
+        <%= form.text_field :storage %>
+        <%= form.label :storage %>
+    </div>
         <% @phone.errors.full_messages_for(:storage).each do |message| %>
         <div><%= message %></div>
         <% end %>
-    </div>
 
     <div class="buttons-container">
-        <%= form.submit class: "submit"%>
-        <% end %>
         <div class="back-container">
             <a href="<%=root_path%>" class="back-link">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
@@ -56,5 +53,7 @@
                 </svg>
             </a>
         </div>
+        <%= form.submit class: "submit"%>
+        <% end %>
     </div>
 </div>

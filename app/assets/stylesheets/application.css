@@ -75,6 +75,7 @@ body {
 img {
     max-width: 100%;
 }
+
 /*Add Items*/
 .add-items{
     position: absolute;
@@ -84,23 +85,61 @@ img {
     width: 400px;
     background-color: #ffffff;
     border-radius: 10px;
-    padding: 0 40px;
-    box-sizing: border-box;
 }
 .add-items h1{
     text-align: center;
     padding: 20px;
+    border-bottom: 1px solid #adadad;
 }
-
-
-
+.add-items form{
+padding: 0 40px;
+box-sizing: border-box;
+}
+form .name{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.name input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.name label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 16px;
+    color: #adadad;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+.name span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #d44a70;
+}
+.name input:focus ~ label,
+.name input:focus ~ label{
+top: -5px;
+color: #d44a70;
+}
 
 .buttons-container{
     display: flex;
     justify-content:flex-start;
 }
 .back-container{
-    padding-left: 10px;
+    padding-right: 10px;
 }
 .submit{
     background-color: #2CA3E6;
