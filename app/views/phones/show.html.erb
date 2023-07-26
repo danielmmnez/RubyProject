@@ -12,18 +12,12 @@
 
 
         <div class="show-buttons-container">
-            <div class="back-container">
-                <a href="<%=root_path%>" class="back-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
-                    </svg>
-                </a>
-            </div>
             <div class="add-cart-container">
                 <%= form_with(url: cart_add_path) do |f|%>
                     <%= f.hidden_field :id, value: @phone.id%>
-                    <%= f.number_field :quantity, value: 0 , min: 1%>
-                    <%= f.submit "Añadir al carrito" %>
+                                        <%= f.submit "Añadir al carrito" ,class:'submit'%>
+                    <%= f.number_field :quantity, value: 0 , min: 1, class:'quantity'%>
+
                 <%end%>
                 <% if false %>
                     <p><%= link_to "Edit", edit_phone_path(@phone)%></p>
@@ -36,6 +30,14 @@
                     </p>
                     <%end%>
             </div>
+                                                <div class="back-container">
+                <a href="<%=root_path%>" class="back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                    </svg>
+                </a>
+            </div>
+
         </div>
     </div>
 </div>
