@@ -1,7 +1,9 @@
 <div class = "category-buttons">
-    <%= link_to t('.all'), phones_path%>
+    <%= link_to t('.all'), phones_path ,class:'all-button'%>
 
-    <%= render partial: 'category', collection: @categories %>
+    <div class="other-categories">
+        <%= render partial: 'category', collection: @categories%>
+    </div>
 </div>
 
 <div class="container-items">
@@ -29,3 +31,4 @@
         </div>
     <% end %>
 </div>
+      <%= render 'shared/footer'%>

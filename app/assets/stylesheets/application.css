@@ -383,7 +383,8 @@ img {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
+
+    margin-bottom: 0;
 }
 .pie-pagina .group1{
     margin: auto;
@@ -438,3 +439,34 @@ img {
     font-size: 15px;
 }
 /*End Footer*/
+
+/*Category*/
+.category-buttons{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    display: inline-block;
+    display: flex;
+}
+.category-buttons .all-button{
+    background-color:#d44a70;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.category-buttons .other-categories{
+    background-color:#2CA3E6;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.category-buttons .other-categories a{
+    color: #ffffff;
+    text-decoration: none;
+}
+/*End category*/

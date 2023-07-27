@@ -29,11 +29,6 @@
         <div><%= message %></div>
         <% end %>
 
-    <div>
-        <%= form.label :category_id %>
-        <%= form.collection_select :category_id , Category.all.order(name: :asc), :id, :name %>
-    </div>
-    
     <div class="name">
         <%= form.text_field :price %>
         <%= form.label :price %>
@@ -50,6 +45,12 @@
         <div><%= message %></div>
         <% end %>
 
+            <div>
+        <%= form.label :category_id %>
+        <%= form.collection_select :category_id , Category.all.order(name: :asc), :id, :name %>
+    </div>
+    <br>
+
     <div class="buttons-container">
         <div class="back-container">
             <a href="<%=root_path%>" class="back-link">
@@ -62,3 +63,4 @@
         <% end %>
     </div>
 </div>
+
