@@ -1,11 +1,14 @@
-<%= turbo_frame_tag "cart" do %>
-    <h1>Cart</h1>
-    <% if @cart.orderables.count > 0 %>
-        <%= render "cart/orderables"%>
-        <p>Total: <%= @cart.total %></p>
-        <br>
-        <a href="<%= cart_path(@cart) %>">Check out</a>
-    <% else %>
-        <p>Your cart is empty!</p>
+<div class="index-cart">
+    <%= turbo_frame_tag "cart" do %>
+        <h1>Carrito de compras</h1>
+        <% if @cart.orderables.count > 0 %>
+            <%= render "cart/orderables"%>
+            <p>Total: <%= @cart.total %></p>
+            <div class="see-cart-container">
+                <a href="<%= cart_path(@cart) %>" class="see-cart">Echar un vistazo</a>
+            </div>
+        <% else %>
+            <p>Tu carrito se encuentra vacio!</p>
+        <% end %>
     <% end %>
-<% end %>
+</div>
