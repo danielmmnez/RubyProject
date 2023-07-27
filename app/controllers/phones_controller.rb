@@ -1,6 +1,11 @@
 class PhonesController < ApplicationController
   def index
-    @phones = Phone.all
+    pp params[:category_id]
+    @categories = Category.order(name: :asc).load_async
+    @phones = Phone.order(created_at: :desc).load_async
+    if params[:category_id]
+      @phones = @phones.where(category_id: params[:category_id])
+    end
   end
 
   def show
@@ -42,6 +47,6 @@ class PhonesController < ApplicationController
 
   private
   def phone_params
-    params.require(:phone).permit(:name, :ram, :brand, :price, :storage)
+    params.require(:phone).permit(:name, :ram, :brand, :price, :storage, :category_id)
   end
 end

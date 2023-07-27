@@ -1,4 +1,11 @@
+<div class = "category-buttons">
+    <%= link_to t('.all'), phones_path%>
+
+    <%= render partial: 'category', collection: @categories %>
+</div>
+
 <div class="container-items">
+
     <% @phones.each do |phone| %>
         <div class="items">
             <figure>
