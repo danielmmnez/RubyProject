@@ -376,3 +376,65 @@ img {
     justify-content:flex-start;
 }
 /*End Cart*/
+
+/*Footer*/
+
+.pie-pagina{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pie-pagina .group1{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .group1 .box .red-social svg{
+    color: #ffffff;
+}
+.pie-pagina .group1 .box figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .group1 .box figure p{
+    color: #ffffff;
+    margin-top: 10px;
+}
+.pie-pagina .group1 .box figure img{
+    width: 125px;
+}
+.pie-pagina .group1 .box h2{
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .group1 .box p{
+    margin-bottom: 10px;
+    color: #333;
+}
+.pie-pagina .group1 .box .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color:#000000;
+    margin-right: 10px;
+    background-color: #2CA3E6;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .group1 .box .red-social a:hover{
+    color: #d44a70;
+}
+.pie-pagina .group2{
+    padding: 15px 10px;
+    text-align: center;
+}
+.pie-pagina .group2 small{
+    font-size: 15px;
+}
+/*End Footer*/
