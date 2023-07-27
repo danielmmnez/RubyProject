@@ -1,9 +1,22 @@
 <h1>Carrito de compras</h1>
 
-<% @cart.orderables.each do |orderable|%>
-    <% phone = orderable.phone %>
-    <p><strong><%= phone.name %></strong> * <%= orderable.quantity %> = $<%= phone.price * orderable.quantity %></p>
-<% end %>
+
+<table class="table" >
+  <thead>
+    <th scope="col">Producto</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio</th>
+  </thead>
+  <tr>
+    <% @cart.orderables.each do |orderable|%>
+        <% phone = orderable.phone %>
+        <td><strong><%= phone.name %></strong></td>
+        <td style="text-align:center" ><%= orderable.quantity %></td>
+        <td><%= phone.price * orderable.quantity %></td>
+    <% end %>
+    </tr>
+</table>
+<br>
 <% if @cart.orderables.count > 0 %>
     <p>Tu valor total a pagar es: <%= @cart.total%></p>
     <br>
