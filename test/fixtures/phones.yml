@@ -1,15 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  ram: MyString
-  brand: MyString
-  price: 1.5
-  storage: 1
+iPhoneX:
+  name: iPhone X
+  ram: 8
+  brand: Apple
+  price: 1800000
+  storage: 256
+  category: apple
 
-two:
-  name: MyString
-  ram: MyString
-  brand: MyString
-  price: 1.5
-  storage: 1
+HuaweiP8:
+  name: Huawei P8
+  ram: 4
+  brand: Huawei
+  price: 650000
+  storage: 64
+  category: huawei

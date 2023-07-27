@@ -31,3 +31,15 @@
 
 en:
   hello: "Hello world"
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index: 
+      all: 'All'
+      title: 'Categories'
+      new: 'Add category'
+    edit:
+    title: 'Edit category'
+    new:
+    title: 'New category'

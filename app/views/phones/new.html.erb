@@ -29,6 +29,11 @@
         <div><%= message %></div>
         <% end %>
 
+    <div>
+        <%= form.label :category_id %>
+        <%= form.collection_select :category_id , Category.all.order(name: :asc), :id, :name %>
+    </div>
+    
     <div class="name">
         <%= form.text_field :price %>
         <%= form.label :price %>
